@@ -27,7 +27,6 @@ Manifest*.toml
 LocalPreferences.toml
 JuliaLocalPreferences.toml
 
-data/ignore
+data/*
 outputs/*
-archive/gens
-archive/logs
+archive/*
