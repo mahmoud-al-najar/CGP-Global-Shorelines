@@ -1,0 +1,49 @@
+# Darwin.jl settings
+seed: 42
+d_fitness: 1
+n_population: 50
+n_elite: 5
+n_gen: 1_000
+log_gen: 1
+save_gen: 1000
+m_rate: 0.1
+p_crossover: 0.0
+p_mutation: 1.0
+n_offsprings: 200
+# CartesianGeneticProgramming.jl settings
+# output_dir: /work/scratch/alnajam/CGP_outputs/NSGA-ii
+output_dir: outputs/global
+id: idstring
+rows: 1
+columns: 30
+recur: 0.0
+n_in: 3
+n_out: 1
+out_m_rate: 0.3
+n_parameters: 0
+param_max: 100
+functions: # MTCGP.jl functions
+  - f_diff
+  - f_reverse
+  - f_sum
+  - f_add
+  - f_subtract
+  - f_mult
+  - f_div
+  - f_abs
+  - f_sqrt
+  - f_pow
+  - f_sin
+  - f_cos
+  - f_sqrt_xy
+  - f_stddev
+  - f_mean
+  - f_irange
+  - f_lteq
+  - f_gt
+  - f_negate
+  - f_tpow
+  - f_nop
+  - f_integrate
+  - f_detrend
+  - f_conv
