@@ -1,5 +1,5 @@
 using Pkg
-Pkg.activate("~/VSCodeProjects/CartesianGeneticProgramming.jl")
+Pkg.activate("/home/mar9328/VSCodeProjects/CartesianGeneticProgramming.jl")
 using MAT
 using Dates
 using Random
@@ -9,14 +9,14 @@ using SeisNoise
 using Statistics
 using NumericalIntegration
 using CartesianGeneticProgramming
-include("../model_template_utils.jl")
-include("../evaluation_metrics.jl")
-include("dataloader_global.jl")
+# include("../model_template_utils.jl")
+include("scripts/utils/evaluation_metrics.jl")
+include("scripts/utils/dataloader_global.jl")
 
 
 function evaluate_dataset(ind::CGPInd, point_dataset)
     CartesianGeneticProgramming.reset!(ind)
-    _t, _x, _e, _sla, _fw, _hs, _tp, _dir, _lat, _lon = point_dataset
+    _t, _x, _e, _sla, _fw, _lat, _lon = point_dataset
     dt = _t[2] - _t[1]
     local inputs
     
@@ -81,7 +81,7 @@ end
 dataset_allpoints = global_dataset(;normalize=true, calibration=true, filter_limits=(9, 120))
 
 cfg_filename = "archive/config.yaml"
-outdir = "archive_test"
+outdir = "archive"
 n_skip_points = 50 #  interval of coastal points skipped between consecutive training points 
 start_seed = 410
 end_seed = 419
