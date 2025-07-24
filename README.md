@@ -4,14 +4,12 @@ Authors: M. Al Najar, D. G. Wilson, R. Almar, 2025.
 This repository hosts the scripts used in the above-mentioned publication. 
 
 ### Datasets
-Due to file size limiatitions, the raw evolved models archive, processed dataset and all raw data used here are provided in a separate repository: https://doi.org/10.5281/zenodo.16407877
+Due to file size limiatitions, the raw archive of evolved populations, processed dataset and all raw data used here are provided in a separate repository: https://doi.org/10.5281/zenodo.16407877.
 
 ### Script files
-The following scripts are included:
-
-1. <code>evolve_global_models.py</code>:
-
-2. <code>global_results.py</code>: reads the outputs from many evolutions, groups the populations, performs the result analysis and produces the plots used in the paper.
+The following scripts are provided:
+1. <code>evolve_global_models.jl</code>: runs a series of CGP evolutions and logs the evolved populations.
+2. <code>evaluate_global_models.jl</code>: reads the outputs from <code>evolve_global_models.jl</code>, groups the model populations (outputs of separate runs), performs the result analysis and produces the plots used in the paper.
 
 ### Environment setup
 This project was developed using Julia Version 1.6.1 and relies heavily on two other Julia repositories:
